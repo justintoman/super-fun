@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { textState, animalsState } from '../store/atoms';
@@ -39,4 +38,4 @@ function Title() {
   return <h2>{text}</h2>;
 }
 
-export default hot(App);
+export default App;

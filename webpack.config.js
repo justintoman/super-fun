@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 module.exports = {
   entry: ['./index.tsx'],
   output: {
@@ -7,10 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    },
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.jpg', '.png']
   },
   devtool: false,
   module: {
@@ -40,9 +38,9 @@ module.exports = {
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader'
+        type: 'asset'
       },
-      { test: /\.(png|jpg|gif)$/, loader: 'file-loader' }
+      { test: /\.(png|jpg|gif)$/, type: 'asset' }
     ]
   },
   context: path.resolve(__dirname, 'src'),
@@ -50,7 +48,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './index.html',
       filename: './index.html'
-    })
+    }),
+    new ReactRefreshWebpackPlugin()
   ],
   devServer: {
     historyApiFallback: true

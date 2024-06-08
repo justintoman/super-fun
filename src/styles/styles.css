@@ -1,21 +1,21 @@
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url(SourceSansPro-Regular.otf.woff2) format('woff2');
-  font-weight: 300;
+	font-family: 'Source Sans Pro';
+	src: url(SourceSansPro-Regular.otf.woff2) format('woff2');
+	font-weight: 300;
 }
 
 html {
-  font-family: Source Sans Pro;
-  background-color: #333;
-  color: #fff;
+	font-family: Source Sans Pro;
+	background-color: #333;
+	color: #fff;
 }
 
 .animals {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .animal {
-  margin: 8px;
-  padding: 16px;
+	margin: 8px;
+	padding: 16px;
 }

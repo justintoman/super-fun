@@ -27,7 +27,7 @@
     "prettier": "^3.3.1",
     "prettier-plugin-organize-imports": "^3.2.4",
     "typescript": "^5.4.5",
-    "vite": "^5.2.13",
+    "vite": "^5.4.7",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "author": "Justin Toman",
